@@ -30,7 +30,7 @@ const initDb = () => {
             }).then(pokemon => console.log(pokemon.toJSON().name))
         })
         
-        console.log('La base de donnée a bien été initialisée !')
+        console.log(`La base de donnée a bien été initialisée avec ${pokemons.length} pokémons.`)
     })
 }
 
