@@ -4,8 +4,8 @@ const pokemons = require('./mock-pokemon')
 
 const sequelize = new Sequelize(
     'pokedex',
-    'snafux',
-    'nadger95',
+    'root',
+    'root',
     {
         host: 'localhost',
         dialect: 'mariadb',
@@ -27,8 +27,9 @@ const initDb = () => {
                 cp: pokemon.cp,
                 picture: pokemon.picture,
                 types: pokemon.types
-            }).then(pokemon => console.log(pokemon.toJSON()))
+            }).then(pokemon => console.log(pokemon.toJSON().name))
         })
+        
         console.log('La base de donnée a bien été initialisée !')
     })
 }
